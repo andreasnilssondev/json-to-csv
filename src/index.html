@@ -1,0 +1,36 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>json-to-csv</title>
+  <style>
+    div {
+      display: inline-block;
+    }
+
+    textarea {
+      width: 400px;
+      height: 400px;
+      margin: 0 40px;
+      display: block;
+    }
+
+    button {
+      width: 200px;
+      margin: 0 40px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <textarea placeholder="JSON" id="json"></textarea>
+    <button id="jsonToCsv">Convert to CSV</button>
+  </div>
+  <div>
+    <textarea placeholder="CSV" id="csv"></textarea>
+  </div>
+  <script src="/index.js"></script>
+</body>
+</html>
