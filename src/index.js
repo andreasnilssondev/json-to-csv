@@ -1,6 +1,8 @@
 function jsonToCsv(json) {
   const users = JSON.parse(json);
-  return Object.keys(users).map(userID => `${users[userID].email},${users[userID].displayName}\n`).join('');
+  const headers = 'email, displayName\n';
+  const values = Object.keys(users).map(userID => `${users[userID].email},${users[userID].displayName}\n`).join('');
+  return headers + values;
 }
 
 const jsonEl = document.getElementById('json');
