@@ -1,5 +1,8 @@
 # json-to-csv
-Convert your JSON to csv:
+Convert your JSON to CSV. Only works with the example JSON structure below. 
+
+# Usage
+[Convert JSON to CSV](https://nandreas.github.io/json-to-csv/src/index.html)
 
 # Example
 Example input:
