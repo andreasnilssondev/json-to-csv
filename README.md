@@ -21,6 +21,7 @@ Example input:
 
 outputs:
 ```
+email, displayName
 email111@mail.com,firstname1111 lastname
 email22222@mail.com,firstname2222 lastname
 ```
