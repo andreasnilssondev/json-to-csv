@@ -1,6 +1,6 @@
 # json-to-csv
 Convert your JSON to CSV. Only works with the example JSON structure below.
-[Demo](https://nandreas.github.io/json-to-csv/src/index.html)
+[Demo](https://nandreas.github.io/json-to-csv/demo/index.html)
 
 # Usage
 (not yet)
