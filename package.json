@@ -25,7 +25,7 @@
     "dev": "npm run browserify && browser-sync start -s demo -f demo index.js",
     "deploy": "npm run test && npm run browserify",
     "test": "eslint *.js && mocha",
-    "browserify": "browserify demo/index.js -o demo/dist/index.js"
+    "browserify": "browserify demo/index.js -o demo/dist.js"
   },
   "devDependencies": {
     "browser-sync": "^2.18.12",
@@ -34,6 +34,10 @@
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-watch": "^3.1.0",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "uglify-js": "^3.0.15"
+  },
+  "dependencies": {
+    "json-2-csv": "^2.1.1"
   }
 }

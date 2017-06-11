@@ -1,31 +1,30 @@
 # json-to-csv
-Convert your JSON to CSV. Only works with the example JSON structure below.
+Convert your JSON object to CSV directly in the browser using [json-2-csv](https://www.npmjs.com/package/json-2-csv)
+
 [Demo](https://nandreas.github.io/json-to-csv/demo/index.html)
 
-# Usage
-(not yet)
+# Example
+Also works if your objects are not in an array, but note that the order of object keys are **not** guaranteed, so you might have to set the order manually.
+
+Input
 ```
-const jsonToCsv = require('./json-to-csv');
-
-const json = {
-  "randomuserid1233": {
-    "email": "email111@mail.com",
-    "displayName": "firstname1111 lastname"
+{
+  "key1": {
+    "a": 1,
+    "b": 2
   },
-  "randomuserid43423": {
-    "email": "email22222@mail.com",
-    "displayName": "firstname2222 lastname"
+  "key2": {
+    "a": 3,
+    "b": 4
   }
-};
-
-jsonToCsv(json)
+}
 ```
 
 output:
 ```
-email, displayName
-email111@mail.com,firstname1111 lastname
-email22222@mail.com,firstname2222 lastname
+a, b
+1,2
+3,4
 ```
 
 # Development
