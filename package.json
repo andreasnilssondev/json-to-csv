@@ -26,6 +26,7 @@
     "deploy": "npm run test && npm run create-dist && git-directory-deploy --directory dist --branch gh-pages",
     "gh": "git-directory-deploy --directory dist --branch gh-pages",
     "gh2": "push-dir --dir=dist --branch=gh-pages",
+    "gh3": "node deploy.js",
     "test": "eslint *.js && mocha",
     "create-dist": "ncp demo dist && browserify dist/index.js -o dist/dist.js"
   },
