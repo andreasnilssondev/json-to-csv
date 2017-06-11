@@ -2,14 +2,41 @@
   "name": "json-to-csv",
   "version": "1.0.0",
   "description": "Convert json to csv",
-  "main": "index.js",
-  "scripts": {
-    "dev": "browser-sync start -s src -f src",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Andreas Nilsson",
   "license": "MIT",
+  "repository": "NaNdreas/extract-href",
+  "author": {
+    "name": "Andreas Nilsson",
+    "email": "andreas.nilsson333@gmail.com",
+    "url": "github.com/NaNdreas"
+  },
+  "engines": {
+    "node": ">=4"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "extract",
+    "extract-href",
+    "href",
+    "html-href"
+  ],
+  "scripts": {
+    "dev": "npm run create-dist && browser-sync start -s dist -f demo index.js",
+    "deploy": "npm run test && npm run create-dist && node deploy.js",
+    "test": "eslint *.js && mocha",
+    "create-dist": "ncp demo dist && browserify dist/index.js -o dist/dist.js"
+  },
   "devDependencies": {
-    "browser-sync": "^2.18.12"
+    "babel-cli": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "eslint": "^3.19.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.3.0",
+    "eslint-watch": "^3.1.0",
+    "gh-pages": "^1.0.0",
+    "mocha": "^3.4.2",
+    "ncp": "^2.0.0"
   }
 }
