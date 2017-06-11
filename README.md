@@ -3,10 +3,32 @@ Convert your JSON object to CSV directly in the browser using [json-2-csv](https
 
 [Demo](https://nandreas.github.io/json-to-csv/demo/index.html)
 
-# Example
+# Examples
 Also works if your objects are not in an array, but note that the order of object keys are **not** guaranteed, so you might have to set the order manually.
 
-Input
+## Array
+```
+[
+  {
+    "a": 1,
+    "b": 2
+  },
+  {
+    "a": 3,
+    "b": 4
+  }
+]
+```
+
+output:
+```
+a, b
+1,2
+3,4
+```
+---
+
+## Without array
 ```
 {
   "key1": {

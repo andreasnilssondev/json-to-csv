@@ -7,9 +7,13 @@ const csvEl = document.getElementById('csv');
 const jsonToCsvButton = document.getElementById('jsonToCsv');
 
 jsonToCsvButton.addEventListener('click', () => {
-  const objects = JSON.parse(jsonEl.value);
-  const array = Object.keys(objects).map(user => objects[user]);
-  json2csv(array, (err, csv) => {
+  let json = JSON.parse(jsonEl.value);
+
+  if (!Array.isArray(json)) {
+    json = Object.keys(json).map(key => json[key]);
+  }
+
+  json2csv(json, (err, csv) => {
     if (err) {
       alert(err);
     }
