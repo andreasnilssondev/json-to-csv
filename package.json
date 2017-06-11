@@ -22,26 +22,18 @@
     "html-href"
   ],
   "scripts": {
-    "dev": "npm run create-dist && browser-sync start -s dist -f demo index.js",
-    "deploy": "npm run test && npm run create-dist && git-directory-deploy --directory dist --branch gh-pages",
-    "gh": "git-directory-deploy --directory dist --branch gh-pages",
-    "gh2": "push-dir --dir=dist --branch=gh-pages",
-    "gh3": "node deploy.js",
+    "dev": "npm run browserify && browser-sync start -s demo -f demo index.js",
+    "deploy": "npm run test && npm run browserify",
     "test": "eslint *.js && mocha",
-    "create-dist": "ncp demo dist && browserify dist/index.js -o dist/dist.js"
+    "browserify": "browserify demo/index.js -o demo/dist/index.js"
   },
   "devDependencies": {
-    "babel-cli": "^6.24.1",
     "browser-sync": "^2.18.12",
     "browserify": "^14.4.0",
     "eslint": "^3.19.0",
     "eslint-config-airbnb-base": "^11.2.0",
     "eslint-plugin-import": "^2.3.0",
     "eslint-watch": "^3.1.0",
-    "gh-pages": "^1.0.0",
-    "git-directory-deploy": "^1.5.1",
-    "mocha": "^3.4.2",
-    "ncp": "^2.0.0",
-    "push-dir": "^0.4.1"
+    "mocha": "^3.4.2"
   }
 }
